@@ -120,7 +120,7 @@ position: fixed;
 bottom: 15px;
 width: 100%;
 text-align: center;
-font-size: 13px;
+font-size: 14px;
 color: #a855f7;
 }
 </style>
@@ -135,9 +135,9 @@ color: #a855f7;
 <div class="card">
 <h1>EID MUBARAK 🌙</h1>
 
-<h3 id="nameTitle">Someone Special</h3>
+<h3 id="nameTitle">Assalamualikum</h3>
 
-<img id="userImage" src="https://i.imgur.com/jqn0ePo.jpeg">
+<img id="userImage" src="https://i.imgur.com/XYqUuKh.jpeg">
 
 <div id="welcomeMsg">
 Wishing you a blessed Eid filled with peace, happiness, and prosperity.  
@@ -146,7 +146,7 @@ May your days be filled with light, success, and endless joy.
 </div>
 
 <div class="signature">
-from Tahsin-Jawad
+(Tahsin-Jawad)
 </div>
 
 <script>
@@ -154,9 +154,10 @@ from Tahsin-Jawad
 /* LINK DATA */
 const params = new URLSearchParams(window.location.search);
 
-let name = params.get("name") || "Someone Special";
-let img = params.get("img") || "https://i.imgur.com/jqn0ePo.jpeg";
+let name = params.get("name") || "Assalamualikum";
+let img = params.get("img") || "https://i.imgur.com/XYqUuKh.jpeg";
 
+/* APPLY */
 document.getElementById("nameTitle").innerText = name;
 document.getElementById("userImage").src = img;
 
