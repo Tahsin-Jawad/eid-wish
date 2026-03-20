@@ -113,12 +113,16 @@ color: gold;
 font-size: 15px;
 text-shadow: 0 0 10px gold;
 line-height: 1.6;
-animation: glow 2s infinite alternate;
 }
 
-@keyframes glow {
-from { text-shadow: 0 0 5px gold; }
-to { text-shadow: 0 0 20px gold; }
+/* SIGNATURE */
+.signature {
+position: fixed;
+bottom: 15px;
+width: 100%;
+text-align: center;
+color: rgba(255, 215, 0, 0.8);
+font-size: 13px;
 }
 </style>
 </head>
@@ -134,31 +138,32 @@ to { text-shadow: 0 0 20px gold; }
 <div class="card">
 <h1>EID MUBARAK 🌙</h1>
 
-<h3 id="nameTitle">...</h3>
+<h3 id="nameTitle">Someone Special</h3>
 
-<img id="userImage" src="https://i.imgur.com/XYqUuKh.jpeg">
+<img id="userImage" src="https://i.imgur.com/jqn0ePo.jpeg">
 
 <div id="welcomeMsg">
-Assalamualikum. Wishing you a blessed Eid filled with peace, happiness, and prosperity.  
+Wishing you a blessed Eid filled with peace, happiness, and prosperity.  
 May this special occasion bring joy to your heart and success to your life.  
-Stay blessed, stay happy, and keep shining like the moonlight.
+Stay blessed and keep smiling always.
 </div>
 </div>
+</div>
+
+<div class="signature">
+from Tahsin-Jawad
 </div>
 
 <script>
 
-/* ⭐ GET DATA FROM LINK */
 const params = new URLSearchParams(window.location.search);
 
-let name = params.get("name") || "...";
-let img = params.get("img") || "https://i.imgur.com/XYqUuKh.jpeg";
+let name = params.get("name") || "Someone Special";
+let img = params.get("img") || "https://i.imgur.com/jqn0ePo.jpeg";
 
-/* APPLY DATA */
 document.getElementById("nameTitle").innerText = name;
 document.getElementById("userImage").src = img;
 
-/* ⭐ STAR GENERATOR */
 function createStars() {
 const container = document.querySelector(".stars");
 
