@@ -125,7 +125,6 @@ img {
 <body>
 
 <div class="stars"></div>
-
 <div class="moon"></div>
 
 <!-- LOGIN -->
@@ -154,7 +153,7 @@ img {
   <button class="next-btn" onclick="nextStep(3)">Next ➜</button>
 </div>
 
-<!-- STEP 3 FINAL -->
+<!-- STEP 3 -->
 <div class="step" id="step3">
   <img src="https://i.imgur.com/MJ18dc4.jpeg">
   <h1 style="color: gold; text-shadow: 0 0 15px gold;">Eid Mubarak 🌙</h1>
@@ -162,6 +161,8 @@ img {
 </div>
 
 <script>
+
+/* PASSWORD CHECK */
 function checkPass() {
   let password = document.getElementById("pass").value;
 
@@ -173,17 +174,22 @@ function checkPass() {
   }
 }
 
+/* STEP SWITCH */
 function nextStep(step) {
-  document.getElementById("step1").style.display = "none";
-  document.getElementById("step2").style.display = "none";
-  document.getElementById("step3").style.display = "none";
+  document.querySelectorAll('.step').forEach(el => {
+    el.style.display = "none";
+  });
 
-  document.getElementById("step" + step).style.display = "block";
+  let target = document.getElementById("step" + step);
+  if(target) {
+    target.style.display = "block";
+  }
 }
 
 /* STARS */
 function createStars() {
   const container = document.querySelector(".stars");
+
   for (let i = 0; i < 60; i++) {
     let star = document.createElement("div");
     star.classList.add("star");
@@ -192,7 +198,9 @@ function createStars() {
     container.appendChild(star);
   }
 }
+
 createStars();
+
 </script>
 
 </body>
